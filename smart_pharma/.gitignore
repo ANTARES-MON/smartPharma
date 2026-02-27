@@ -1,0 +1,48 @@
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.iml
+*.ipr
+*.iws
+.idea/
+.DS_Store
+
+# ── PROTECTED: API & Credentials ──
+# Google Services (Firebase/Maps keys)
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# AndroidManifest contains Google Maps API key — never push this
+android/app/src/main/AndroidManifest.xml
+
+# Entire services layer (API base URLs, auth logic, WebSocket, notifications)
+lib/services/
+
+# Android local config (SDK path, keystore path)
+android/local.properties
+android/key.properties
+
+# Any env/secret files
+*.env
+.env
+.env.*
+lib/config/secrets.dart
+lib/config/env.dart
+
+# Flutter project definition (dependency list + versions — build fails without this)
+pubspec.yaml
+
+# Android build config (signing, SDK versions, dependencies)
+android/app/build.gradle
+android/build.gradle
+android/app/src/main/AndroidManifest.xml
+
+# Generated files
+lib/generated/
+*.g.dart
+*.freezed.dart

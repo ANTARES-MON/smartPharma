@@ -1,0 +1,22 @@
+# ── ROOT-LEVEL MONOREPO GITIGNORE ──
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Any stray env/secret files at root
+.env
+.env.*
+*.env
+
+# Docker orchestration (no one can spin up without this)
+docker-compose.yml
+docker-compose.*.yml
+
+# Nginx gateway (no routing without this)
+nginx.conf
+nginx/

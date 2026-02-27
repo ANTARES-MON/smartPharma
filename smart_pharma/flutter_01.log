@@ -1,0 +1,203 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter gen-l10n
+
+## exception
+
+ProcessException: ProcessException: `dart format` failed with exit code 65
+
+stdout:
+Formatted no files in 0.02 seconds.
+
+
+stderr:
+Could not format because the source could not be parsed:
+
+line 815, column 14 of lib/l10n/app_localizations_ar.dart: 'return' can't be used as an identifier because it's a keyword.
+    ╷
+815 │   String get return => 'عودة';
+    │              ^^^^^^
+    ╵
+Could not format because the source could not be parsed:
+
+line 815, column 14 of lib/l10n/app_localizations_en.dart: 'return' can't be used as an identifier because it's a keyword.
+    ╷
+815 │   String get return => 'Return';
+    │              ^^^^^^
+    ╵
+Could not format because the source could not be parsed:
+
+line 815, column 14 of lib/l10n/app_localizations_fr.dart: 'return' can't be used as an identifier because it's a keyword.
+    ╷
+815 │   String get return => 'Retour';
+    │              ^^^^^^
+    ╵
+Could not format because the source could not be parsed:
+
+line 1706, column 14 of lib/l10n/app_localizations.dart: 'return' can't be used as an identifier because it's a keyword.
+     ╷
+1706 │   String get return;
+     │              ^^^^^^
+     ╵
+
+  Command: /Users/antares/develop/flutter/bin/cache/dart-sdk/bin/dart /Users/antares/develop/flutter/bin/cache/dart-sdk/bin/dart format /Users/antares/smart_pharma/lib/l10n/app_localizations_ar.dart /Users/antares/smart_pharma/lib/l10n/app_localizations_en.dart /Users/antares/smart_pharma/lib/l10n/app_localizations_fr.dart /Users/antares/smart_pharma/lib/l10n/app_localizations.dart
+
+```
+#0      generateLocalizations (package:flutter_tools/src/localizations/gen_l10n.dart:96:7)
+<asynchronous suspension>
+#1      GenerateLocalizationsCommand.runCommand (package:flutter_tools/src/commands/generate_localizations.dart:263:5)
+<asynchronous suspension>
+#2      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1559:27)
+<asynchronous suspension>
+#3      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#4      CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#5      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:487:9)
+<asynchronous suspension>
+#6      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#7      FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:422:5)
+<asynchronous suspension>
+#8      run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:104:11)
+<asynchronous suspension>
+#9      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#10     main (package:flutter_tools/executable.dart:103:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel
+    stable, 3.38.6, on
+    macOS 15.7.3 24G419
+    darwin-x64, locale
+    en-JP) [282ms]
+    [32m•[39m Flutter version
+      3.38.6 on channel
+      stable at
+      /Users/antares/develo
+      p/flutter
+    [32m•[39m Upstream repository
+      https://github.com/fl
+      utter/flutter.git
+    [32m•[39m Framework revision
+      8b87286849 (4 weeks
+      ago), 2026-01-08
+      10:49:17 -0800
+    [32m•[39m Engine revision
+      78fc3012e4
+    [32m•[39m Dart version 3.10.7
+    [32m•[39m DevTools version
+      2.51.1
+    [32m•[39m Feature flags:
+      enable-web,
+      enable-linux-desktop,
+      enable-macos-desktop,
+      enable-windows-deskto
+      p, enable-android,
+      enable-ios,
+      cli-animations,
+      enable-native-assets,
+      omit-legacy-version-f
+      ile,
+      enable-lldb-debugging
+
+[32m[✓][39m Android toolchain -
+    develop for Android
+    devices (Android SDK
+    version 35.0.0) [9.1s]
+    [32m•[39m Android SDK at
+      /Users/antares/Librar
+      y/Android/sdk
+    [32m•[39m Emulator version
+      36.3.10.0 (build_id
+      14472402) (CL:N/A)
+    [32m•[39m Platform android-36,
+      build-tools 35.0.0
+    [32m•[39m ANDROID_HOME =
+      /Users/antares/Librar
+      y/Android/sdk
+    [32m•[39m Java binary at:
+      /Applications/Android
+      Studio.app/Contents/j
+      br/Contents/Home/bin/
+      java
+      This is the JDK
+      bundled with the
+      latest Android Studio
+      installation on this
+      machine.
+      To manually set the
+      JDK path, use:
+      `flutter config
+      --jdk-dir="path/to/jd
+      k"`.
+    [32m•[39m Java version OpenJDK
+      Runtime Environment
+      (build
+      21.0.8+-14196175-b103
+      8.72)
+    [32m•[39m All Android licenses
+      accepted.
+
+[33m[!][39m Xcode - develop for iOS
+    and macOS [2.1s]
+    [31m✗[39m Xcode installation is
+      incomplete; a full
+      installation is
+      necessary for iOS and
+      macOS development.
+      Download at:
+      https://developer.app
+      le.com/xcode/
+      Or install Xcode via
+      the App Store.
+      Once installed, run:
+        sudo xcode-select
+        --switch
+        /Applications/Xcode
+        .app/Contents/Devel
+        oper
+        sudo xcodebuild
+        -runFirstLaunch
+    [32m•[39m CocoaPods version
+      1.16.2
+
+[32m[✓][39m Chrome - develop for
+    the web [89ms]
+    [32m•[39m Chrome at
+      /Applications/Google
+      Chrome.app/Contents/M
+      acOS/Google Chrome
+
+[32m[✓][39m Connected device (3
+    available) [2.3s]
+    [32m•[39m Redmi Note 8 (mobile)
+      • 424880 •
+      android-arm64  •
+      Android 11 (API 30)
+    [32m•[39m macOS (desktop)
+      • macos  • darwin-x64
+      • macOS 15.7.3 24G419
+      darwin-x64
+    [32m•[39m Chrome (web)
+      • chrome •
+      web-javascript •
+      Google Chrome
+      144.0.7559.133
+
+[32m[✓][39m Network resources
+    [3.0s]
+    [32m•[39m All expected network
+      resources are
+      available.
+
+[33m![39m Doctor found issues in 1
+  category.
+```

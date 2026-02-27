@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">smartPharma</string>
+    <string name="facebook_app_id">1691388998911083</string>
+    <string name="fb_login_protocol_scheme">fb1691388998911083</string>
+    <string name="facebook_client_token">3d98fd3afe9a1e84b6cd14ac770ab5af</string>
+</resources>
